@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elevé · Buy & Rent Property in India</title>
+  <meta name="description" content="Buy or rent apartments, villas, plots and commercial property across major Indian cities. AI-powered search, fair-price checks and rated agents." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#14223d" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#/" class="logo" aria-label="Elevé home">
+        <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg></span>
+        <span>Elev<b>é</b></span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="#/properties?listingType=sale" data-nav="sale">Buy</a>
+        <a href="#/properties?listingType=rent" data-nav="rent">Rent</a>
+        <a href="#/agents" data-nav="agents">Agents</a>
+        <a href="#/shortlist" data-nav="shortlist">Saved<span class="badge" id="shortlist-count">0</span></a>
+      </nav>
+      <div class="header-actions">
+        <a href="#/sell" class="btn btn-primary sell-btn" data-nav="sell">Sell property</a>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu and settings" aria-haspopup="dialog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <span id="menu-avatar" class="avatar xs" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Elevé</strong>
+        <p style="margin-top:10px;max-width:380px">Find a home to buy or rent across India's major cities, with smart search, honest price checks and trusted local agents.</p>
+      </div>
+      <div id="footer-cities"></div>
+      <p class="small">Demo data · Prices and agents are generated for illustration · Map © OpenStreetMap contributors, © CARTO</p>
+    </div>
+  </footer>
+
+  <div class="sheet-backdrop hidden" id="sheet-backdrop"></div>
+  <aside class="sheet hidden" id="agent-sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title"></aside>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script src="account.js"></script>
+</body>
+</html>

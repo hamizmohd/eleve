@@ -1,0 +1,17 @@
+# Dependencies (reinstalled with npm install)
+node_modules/
+
+# Runtime data: profile, enquiries and private ownership documents.
+# db.json is regenerated from data/seed.js on first start.
+data/db.json
+data/uploads/
+
+# Secrets
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.log

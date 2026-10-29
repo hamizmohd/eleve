@@ -1,0 +1,9 @@
+{
+  "appId": "com.eleve.app",
+  "appName": "Elevé",
+  "webDir": "public",
+  "server": {
+    "androidScheme": "http",
+    "cleartext": true
+  }
+}
